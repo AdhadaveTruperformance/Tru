@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/images/tru.png" type="image/png">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KRKRMLK8');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRKRMLK8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internal File Search Portal</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .center-text
+    {
+    margin-top: 50px;
+    font-family: sans-serif;
+    margin-bottom: -10px;
+    text-align: center;
+    font-size: 1.5em;
+    display: block;
+    font-weight: bold;
+    }
+    .justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    margin: 20px auto 0;
+}
+    header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header img {
+    width: 210px;
+    object-fit: contain;
+}
+    
+    .cta-container {
+        text-align: center;
+        margin-top: 0px;
+      
+    }
+    .cta-button {
+       
+        display: block;
+        width: fit-content;
+        padding: 10px 20px;
+        background-color: #FF9A00;
+        text-decoration: none;
+        margin: 10px auto 20px;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1em;
+        color: #FFFFFF;
+        border-radius: 5px;
+        transition: ease-in-out .3s;
+    }
+     .cta-button:hover{
+        background-color:#6EC1E4;
+        transition: ease-in-out.3s;
+    }
+    .cta-text-img
+    {   
+        display: block;
+        width: fit-content;
+        padding: 10px 20px;
+        text-decoration: none;
+        margin: 10px auto 20px;
+        line-height: 1em;
+        color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .cta-div {
+        padding: 20px 10px;
+        border: 1px solid #00000026;
+        margin: 10px;
+        font-family: sans-serif;
+        line-height: 25px;
+        transition: ease-in-out .3s;
+        text-align: center;
+        height: 100%;
+    }
+
+    .cta-div:hover {
+        /* box-shadow: 5px 5px 10px #00000021;
+        transition: ease-in-out .3s; */
+    }
+
+    .cta-container {
+        text-align: center;
+        margin-top: 110px;
+    }
+
+    .cta-second-row{
+        margin: 20px auto 0 !important;
+    }
+
+    h2 {
+        margin-top: 50px;
+        font-family: sans-serif;
+        margin-bottom: -10px;
+    }
+    .form-control
+    {
+    height: 50px;
+    padding: 20px 12px;
+    font-size: 17px;
+    color: #000;
+    border: 1px solid #ff9a01;
+    border-radius: 5px;
+    box-shadow: -1px 2px 5px #00000036;
+    transition: none;
+    margin: 0 0 5px;
+    }
+    .btn
+    {
+        display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF9A00;
+    text-decoration: none;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1em;
+    color: #FFFFFF;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+    border: none;
+    }
+    .path-info
+    {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    }
+    #copyButton
+    {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #FF9A00;
+    text-decoration: none;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1em;
+    color: #FFFFFF;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+    border: none;
+    display: none;
+    }
+    .text-center
+    {
+        margin-top: 50px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    .text-center-para 
+    {
+        font-family: sans-serif;
+        line-height: 25px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .cta-container {
+        display: flex;
+        width: 1240px;
+        margin: 20px auto 0;
+    }
+
+   .cta-second-row .first-section{
+            width: 50%;
+          padding: 20px 10px 30px;
+   }
+
+   .cta-second-row .middle-section{
+          width: 50%;
+          padding: 20px 10px 30px;
+   }
+   
+    @media screen and (max-width: 600px) {
+        .form-control {
+            width: 100%;
+            
+        }
+    }
+    
+</style>
+</head>
+<body>
+
+<header>
+    <img src="./assets/images/trulogo-2.png">
+    <h1>Tru Portal</h1>
+</header>
+
+
+<div class="container-fluid">   
+<h2 class="center-text">Quick Links</h2>
+<div class="row justify-content-center">
+
+    <div class="col-md-2">
+        <div class="cta-div" style="border: 0;">
+            
+            <a href="https://slack.com" target="_blank" class="cta-text-img" id="openSlack"><img src="assets/images/slack.png" alt=""></a>
+            <!-- Communicate and collaborate with your team in real-time through instant messaging and organized channels. 💬  -->
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="cta-div" style="border: 0;">
+            <a href="https://monday.com/" target="_blank" class="cta-text-img" id="openMondayBoard"><img src="assets/images/Monday.png" alt=""></a>
+            <!-- Collaborate with your team, organize projects, and access categorized folders. A great tool for staying on top of tasks! 📂 -->
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="cta-div" style="border: 0;">
+            <a href="https://outlook.office.com/" class="cta-text-img" target="_blank" id="microsoftOutLook"><img src="assets/images/Microsoft.png" alt=""></a>
+            <!-- Manage your emails, schedule important meetings, and stay organized with Microsoft's reliable email service. 📧 -->
+        </div>
+    </div>
+
+
+    <div class="col-md-2">
+        <div class="cta-div"  style="border: 0;">
+            <a href="https://tp-devserver.com/tru-lms-ldash/" target="_blank" class="cta-text-img" id="truLMS"><img src="assets/images/tru.png" alt="TRU LMS"></a>
+            <!-- Boost your skills and shine together at our learning hub! 📕 -->
+        </div>
+    </div>
+    <div class="col-md-2" >
+        <div class="cta-div" style="border: 0;">
+            <a href="https://apps.paybooks.in/" class="cta-text-img" target="_blank" id="payBook"><img src="assets/images/Paybook.png" alt=""></a>
+            <!-- Check your pay and leaves and applications hassle-free right here! 💰 -->
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="cta-div" style="border: 0;">
+            <a href="https://chat.openai.com/" target="_blank" class="cta-text-img" id="chatGPT"><img src="assets/images/chatGPT.png" alt="CHATGPT"></a>
+            <!-- Get AI-powered assistance for your questions, projects, and research with ChatGPT. 🤖 -->
+        </div>
+    </div>
+</div>
+
+<h2 class="center-text">Access Your Files</h2>
+<div class="row justify-content-center">
+    <div class="col-md-3">
+    <div class="cta-div">
+        <a href="https://truperformanceus.sharepoint.com/sites/TruPerformanceDataRepository/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FTruPerformanceDataRepository%2FShared%20Documents%2FTru%20Performance%20Clients&p=true&ga=1" class="cta-button" target="_blank">Client Name</a>
+        Explore folders to place FINAL versions of assets delivered and reference materials received from the client.
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="cta-div">
+        <a href="https://truperformanceus.sharepoint.com/:f:/s/TruPerformanceDataRepository/EqXycO4kQllHuNxVT-4XoCwB0g54-rrEroRug7kdcJ1jFQ?e=chPhrT" target="_blank" class="cta-button">By Functions</a>
+        Team folders created for easy access to individual work projects. Find folders categorized by Team individuals and common folders for the team where materials are arranged for common use.
+    </div>
+    </div>
+    <div class="col-md-3">
+    <div class="cta-div">
+        <a href="https://truperformanceus.sharepoint.com/:f:/s/TruPerformanceDataRepository/Ei08c39xZwVBiAvAfNXIKSsBzIuvZLv-StEoIJQojI8ezg?e=VBqO5C" target="_blank" class="cta-button">SOP'S</a>
+        Find everything you need to navigate work in the Tru Performance style. Slack, Monday.com, Email, and more.
+    </div>
+    </div>
+</div>
+
+
+
+<div class="container mt-5">
+    <h2 class="text-center">File Name Generator</h2>
+    <p class="text-center-para">Here is our singular system of naming all files at Tru.<br> Use this tool to generate a file name for everything you work on.</p>
+
+    <form id="pathForm">
+        <div class="row row-span" >
+            <div class="col-md-3 mb-3">
+                <input type="text" id="baseURL" name="baseURL" class="form-control" placeholder="Enter Client Name" required>
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <input type="text" id="path" name="path" class="form-control" placeholder="Enter Project" required>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <input type="text" id="parameter1" name="parameter1" class="form-control" placeholder="Enter Task Name">
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <input type="text" id="fileversion" name="fileversion" class="form-control" placeholder="File Version">
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <button type="submit" class="btn ">Generate Path</button>
+            </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="path-info text-center mt-4">
+        <div id="output" class="mb-3"></div>
+        <button id="copyButton" class="btn">Copy Path</button>
+    </div>
+</div>
+</div>
+<script>
+    function openApp(appUrl, webUrl) {
+        window.location.href = appUrl;
+        setTimeout(function() {
+            window.location.href = webUrl;
+        }, 5000);
+    }
+    document.getElementById('openSlack').addEventListener('click', function() {
+        openApp('slack://open', 'https://slack.com/');
+    });
+
+    document.getElementById('openMondayBoard').addEventListener('click', function() {
+        openApp('monday://open', 'https://monday.com/');
+    });
+
+    document.getElementById('microsoftOutLook').addEventListener('click', function() {
+        openApp('ms-outlook://', 'https://outlook.office.com/');
+    });
+
+    document.getElementById('truLMS').addEventListener('click', function() {
+        openApp('truLMS://open', '');
+    });
+    
+    document.getElementById('payBook').addEventListener('click', function() {
+        openApp('paybooks://open', 'https://apps.paybooks.in/');
+    });
+
+    document.getElementById('chatGPT').addEventListener('click', function() {
+        openApp('chatGPT://open', 'https://chat.openai.com/');
+    });
+</script>
+
+
+<script>
+  document.getElementById("pathForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var baseURL = document.getElementById("baseURL").value.toUpperCase();
+    var path = document.getElementById("path").value;
+
+    function capitalizeEachWord(str) {
+        return str.replace(/\b\w/g, function(match) {
+            return match.toUpperCase();
+        });
+    }
+
+    var parameter1 = document.getElementById("parameter1").value.trim();
+    var fileversion = document.getElementById("fileversion").value.trim();
+    var currentDate = new Date();
+    var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    var day = ("0" + currentDate.getDate()).slice(-2);
+    var date = day + month + currentDate.getFullYear();
+
+    var projectName = capitalizeEachWord(path);
+
+    var fullPath = baseURL + "_" + projectName;
+    if (parameter1 !== "") {
+        fullPath += "_" + capitalizeEachWord(parameter1);
+    }
+    fullPath += "_" + date;
+    if (fileversion !== "") {
+        fullPath += "_" + capitalizeEachWord(fileversion);
+    }
+
+    document.getElementById("output").innerText = fullPath;
+    document.getElementById("copyButton").style.display = "inline-block";
+});
+
+document.getElementById("copyButton").addEventListener("click", function() {
+    var outputText = document.getElementById("output").innerText;
+    navigator.clipboard.writeText(outputText).then(function() {
+        alert("Path copied to clipboard: " + outputText);
+    }).catch(function(err) {
+        console.error('Failed to copy: ', err);
+    });
+});
+</script>
+
+       
+        
+
+        
+
+</body>
+</html>
