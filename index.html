@@ -24,7 +24,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <style>
     body {
-        font-family: Arial, sans-serif;
+        font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
     }
@@ -32,7 +32,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     .center-text
     {
         margin-top: 110px;
-        font-family: sans-serif;
+        font-family: "Poppins", sans-serif;
         margin-bottom: 60px; 
         text-align: center;
         font-size: 1.5em;
@@ -73,7 +73,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         background-color: #FF9A00;
         text-decoration: none;
         margin: 10px auto 20px;
-        font-family: "Montserrat", Sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;
@@ -101,26 +101,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         padding: 20px 10px;
         border: 1px solid #00000026;
         margin: 10px;
-        font-family: sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 25px;
         transition: ease-in-out .3s;
         text-align: center;
         height: 100%;
     }
 
-    .cta-div:hover {
-        /* box-shadow: 5px 5px 10px #00000021;
-        transition: ease-in-out .3s; */
-    }
-
-    .cta-container {
-        text-align: center;
-        margin-top: 110px;
-    }
-
-    .cta-second-row{
-        margin: 20px auto 0 !important;
-    }
 
     h2 {
         margin-top: 50px;
@@ -145,7 +132,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         padding: 20px 12px;
         background-color: #FF9A00;
         text-decoration: none;
-        font-family: "Montserrat", Sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 15px;
         font-weight: 600;
         text-transform: uppercase;
@@ -168,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         padding: 10px 20px;
         background-color: #FF9A00;
         text-decoration: none;
-        font-family: "Montserrat", Sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;
@@ -187,7 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     .text-center-para 
     {
-        font-family: sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 25px;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -216,6 +203,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {
         margin-bottom: 100px;
     }
+
+
+    @media (max-width: 767px) {
+    .container-fluid .justify-content-center {
+        gap: 20px;
+    }
+
+    .cta-div {
+        text-align: center;
+    }
+
+    .cta-button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -273,7 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="col-md-2-sm-4 col-auto setting">
                 <div class="cta-div" style="border: 0;">
-                    <a href="" target="_blank" class="cta-text-img" id="perflexity"><img src="assets/images/perplexity.png" alt=""></a>
+                    <a href="https://www.perplexity.ai/" target="_blank" class="cta-text-img" id="perplexity"><img src="assets/images/perplexity.png" alt=""></a>
                     <!-- Get AI-powered assistance for your questions, projects, and research with ChatGPT. 🤖 -->
                 </div>
             </div>
@@ -368,6 +373,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.getElementById('chatGPT').addEventListener('click', function() {
         openApp('chatGPT://open', 'https://chat.openai.com/');
+    });
+    
+    document.getElementById('perplexity').addEventListener('click', function() {
+        openApp('perplexity://open', 'https://www.perplexity.ai/');
     });
 </script>
 
